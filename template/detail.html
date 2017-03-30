@@ -9,6 +9,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/components/accordion.css"></script>
 
 <script src="js/lib/semantic.min.js"></script>
+<script src="js/common/common.js"></script>
 
 <!--個別-->
 <link rel="stylesheet" href="css/common.css" type="text/css" />
@@ -19,8 +20,18 @@
   <nav>
     <div class="inner-nav cfx">
       <ul class="cfx">
-        <li><a href="">職種一覧ページ</a></li>
-        <li><a href="">各職種</a></li>
+        <li class="parent-li"><a href="">職種一覧ページ</a></li>
+        <li class="parent-li"><a href="">各職種</a>
+        <div class="inner-child-nav">
+          <ul class="child-nav">
+            <li><a href="">ディレクター</a></li>
+            <li><a href="">フロントエンドエンジニア</a></li>
+            <li><a href="">デザイナー</a></li>
+            <li><a href="">プロデューサー</a></li>
+            <li><a href="">WMC</a></li>
+          </ul>
+          </div>
+        </li>
       </ul>
       <p class="logout"><a href="login.html">ログアウト</a></p>
     </div>
@@ -102,7 +113,7 @@
     <!-- /スキルデータ部分 END -->
 
     <!-- ▼ログインしてる＆自分のページなら表示。それ以外は非表示 -->
-    <div class="edit cfx">
+    <div class="edit">
       <p class="goto-edit"><button class="ui inverted green button"><a href="detail_edit.html">編集する</a></button></p>
     </div>
 
