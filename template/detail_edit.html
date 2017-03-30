@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>Hello...</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/components/accordion.css"></script>
+
+<script src="js/lib/semantic.min.js"></script>
+
+<!--個別-->
+<link rel="stylesheet" href="css/common.css" type="text/css" />
+<link rel="stylesheet" href="css/detail.css" type="text/css" />
+</head>
+
+<body class="page-edit">
+  <nav>
+    <div class="inner-nav cfx">
+      <ul class="cfx">
+        <li><a href="">職種一覧ページ</a></li>
+        <li><a href="">各職種</a></li>
+      </ul>
+      <p class="logout"><a href="login.html">ログアウト</a></p>
+    </div>
+  </nav>
+
+  <header>
+   <h1 class="ui header">
+        片岡鶴太郎さんの編集ページ
+    </h1>
+  </header>
+
+  <div class="container">
+  <form action="">
+  <!-- ▼個人紹介 -->
+    <div class="introduce cfx">
+      <div class="thumb">
+        <p><img src="https://placehold.jp/150x150.png" alt=""></p>
+      </div>
+      <div class="introduce-txt">
+        <p class="name"><input type="text" name="" ></p>
+        <table class="information segment ui">
+          <tbody>
+             <tr>
+              <th>職種</th>
+              <td><input type="text" name="" ></td>
+            </tr>
+            <tr>
+              <th>課</th>
+              <td><input type="text" name="" ><span>課</span></td>
+            </tr>
+            <tr>
+              <th>職歴</th>
+              <td><input type="text" name="" ></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="sns">
+          <p class="socialize">SOCIALIZE</p>
+          <ul class="sns-lists">
+            <li><a href="" ><i class="twitter icon"></i></a></li>
+            <li><a href="" ><i class="slack icon"></i></a></li>
+            <li><a href="" ><i class="facebook icon"></i></a></li>
+            <li><a href="" ><i class="mail icon"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- /個人紹介 END -->
+
+    <!-- ▼スキルデータ部分 -->
+    <div class="skilldata">
+      <h2>スキル表</h2>
+      <div class="skilltable">
+        <div class="svg-skill">
+          <p class="title">スキルチャート<span>（FE）</span></p>
+          <p>SVGグラフが入る</p>
+        </div>
+        <div class="other-skill">
+          <section>
+            <h3><span>その他技術スキル</span></h3>
+            <p>カンマで区切って入れて下さい</p>
+            <textarea name=""></textarea>
+          </section>
+          <section>
+            <h3><span>どうでもスキル</span></h3>
+            <p>カンマで区切って入れて下さい</p>
+            <textarea name=""></textarea>
+          </section>
+        </div>
+      </div>
+    </div>
+    <!-- /スキルデータ部分 END -->
+
+
+    <!-- ▼ログインしてる＆自分のページなら表示。それ以外は非表示 -->
+    <div class="edit edit-fix cfx">
+        <p class="goto-cancel"><button class="ui inverted red button"><a href="detail_edit.html">キャンセル</a></button></p>
+        <p class="goto-fix"><button class="ui inverted green button"><a href="detail_edit.html">変更を確定する</a></button></p>
+    </div>
+
+</form>
+  <!-- /container --></div>
+
+</body>
+</html>

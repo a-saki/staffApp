@@ -1,0 +1,226 @@
+@charset "UTF-8";
+
+header {
+	padding-top: 50px;
+	padding-bottom: 30px;
+	text-align: center;
+}
+
+ul {
+	padding-left: 0;
+	list-style-type: none;
+}
+
+h1 {
+	text-align: center;
+}
+
+.container {
+	margin-top: 50px;
+	margin-left: 10%;
+	margin-right: 10%;
+	padding-bottom: 50px;
+}
+
+header {
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+/*
+* 個人紹介部分
+*/
+.introduce .thumb {
+	float: left;
+	width: 150px;
+	margin-right: 20px;
+}
+
+.introduce .introduce-txt {
+	float: left;
+	width: calc(100% - 170px);
+}
+
+.introduce .name {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.introduce .information {
+	box-sizing: border-box;
+	width: 100%;
+	position: relative;
+}
+
+.introduce .information tr {
+	border-bottom: 1px solid #FAFAFA;
+}
+
+.introduce .information th, .introduce .information td {
+	padding: 10px;
+}
+
+.introduce .information th {
+	width: 5rem;
+	text-align: left;
+	padding-right: 15px;
+	background-color: #FAFAFA;
+}
+
+.introduce .information:after {
+	content: '';
+	position: absolute;
+	bottom: -3px;
+	left: 0;
+	border-top: 1px solid rgba(34, 36, 38, 0.15);
+	background: rgba(0, 0, 0, 0.03);
+	width: 100%;
+	height: 6px;
+	visibility: visible;
+}
+
+.introduce .sns .socialize {
+	padding-bottom: 10px;
+	border-bottom: 1px solid rgba(34, 36, 38, 0.15);
+	font-weight: bold;
+}
+
+.introduce .sns-lists {
+	list-style-type: none;
+}
+
+.introduce .sns-lists li {
+	float: left;
+}
+
+.introduce .sns-lists a {
+	color: #222;
+}
+
+.introduce .sns-lists a:hover {
+	color: #00B5AD;
+}
+
+/*
+* スキルデータ部分
+*/
+.skilldata {
+	margin-top: 50px;
+	padding-top: 20px;
+	border-top: 1px solid rgba(34, 36, 38, 0.15);
+}
+
+.skilltable {
+	display: table;
+	width: 100%;
+}
+
+.skilltable .svg-skill {
+	display: table-cell;
+	vertical-align: top;
+	width: 500px;
+	height: 500px;
+	background-color: #f8f8f8;
+}
+
+.skilltable .svg-skill .title {
+	font-weight: bold;
+	text-align: center;
+}
+
+.skilltable .other-skill {
+	padding-left: 20px;
+	display: table-cell;
+	vertical-align: top;
+}
+
+.skilltable .other-skill section {
+	margin-bottom: 45px;
+}
+
+.skilltable .other-skill h3 {
+	border-top: 1px dashed rgba(34, 36, 38, 0.15);
+	border-bottom: 1px dashed rgba(34, 36, 38, 0.15);
+	padding: 5px 0;
+}
+
+.skilltable .other-skill h3 span {
+	padding: 10px 0;
+	padding-left: 1rem;
+	display: block;
+	border-top: 1px dashed rgba(34, 36, 38, 0.15);
+	border-bottom: 1px dashed rgba(34, 36, 38, 0.15);
+}
+
+.skilltable .other-skill ul {
+	padding-left: 2rem;
+}
+
+.edit {
+	margin-top: 50px;
+}
+
+.edit a {
+	color: #2ecc40;
+}
+
+.edit .button:hover a {
+	color: #fff;
+}
+
+.edit .goto-edit {
+	float: right;
+}
+
+.edit.edit-fix p {
+	float: left;
+}
+
+.edit.edit-fix p.goto-fix {
+	float: right;
+}
+
+.edit .goto-cancel a {
+	color: #ff695e;
+}
+
+.edit .goto-fix {
+	float: right;
+}
+
+input:not([type]), input[type=date], input[type=datetime-local], input[type=email], input[type=file], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=time], input[type=url] {
+	font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+	margin: 0;
+	outline: 0;
+	-webkit-appearance: none;
+	tap-highlight-color: rgba(255, 255, 255, 0);
+	line-height: 1.21428571em;
+	padding: .2em 1em;
+	background: #fff;
+	border: 1px solid rgba(34, 36, 38, 0.15);
+	color: rgba(0, 0, 0, 0.87);
+	border-radius: .28571429rem;
+	box-shadow: 0 0 0 0 transparent inset;
+	transition: color .1s ease,border-color .1s ease;
+}
+
+textarea {
+	margin: 0;
+	width: 100%;
+	-webkit-appearance: none;
+	tap-highlight-color: rgba(255, 255, 255, 0);
+	padding: .78571429em 1em;
+	background: #fff;
+	border: 1px solid rgba(34, 36, 38, 0.15);
+	outline: 0;
+	color: rgba(0, 0, 0, 0.87);
+	border-radius: .28571429rem;
+	box-shadow: 0 0 0 0 transparent inset;
+	transition: color .1s ease,border-color .1s ease;
+	line-height: 1.2857;
+	resize: vertical;
+}
+
+.information input {
+	margin-right: 5px;
+}

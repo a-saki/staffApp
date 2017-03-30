@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>Hello...</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/components/accordion.css"></script>
+
+<script src="js/lib/semantic.min.js"></script>
+<script src="js/list.js"></script>
+
+<!--個別-->
+<link rel="stylesheet" href="css/common.css" type="text/css" />
+<link rel="stylesheet" href="css/list.css" type="text/css" />
+</head>
+
+<body class="page-lists">
+  <nav>
+    <div class="inner-nav cfx">
+      <ul class="cfx">
+        <li><a href="">職種一覧ページ</a></li>
+        <li><a href="">各職種</a></li>
+      </ul>
+      <p class="logout"><a href="login.html">ログアウト</a></p>
+    </div>
+  </nav>
+
+  <header>
+   <h1 class="ui header">
+        社員一覧
+    </h1>
+  </header>
+ 
+  <div class="container">
+    <div class="ocu-lists">
+      <div class="ui grid">
+      <div class="four wide column">
+        <div class="ui vertical fluid tabular menu">
+          <a class="active item"data-tab="tab-name1">
+            ディレクター
+          </a>
+          <a class="item"data-tab="tab-name2">
+            フロントエンド
+          </a>
+          <a class="item"data-tab="tab-name3">
+            デザイナー
+          </a>
+          <a class="item"data-tab="tab-name4">
+            プロヂデューサー
+          </a>
+          <a class="item"data-tab="tab-name5">
+            WMC
+          </a>
+        </div>
+      </div>
+      <!-- ▼タブの中味 -->
+      <div class="wrp-tabcotents">
+        <div class="twelve wide stretched column ui tab tabcontents active" data-tab="tab-name1">
+          <div class="ui segment">
+            <div class="nner-tab">
+            <h2>ディレクター</h2>
+              <div class="department-blk">
+               <p class="department">1課</p>
+                 <ul class="staff-lists cfx">
+                    <li><a href="">山田太郎</a></li>
+                    <li><a href="">片岡鶴太郎</a></li>
+                    <li><a href="">道端ジェシカ</a></li>
+                    <li><a href="">道端アンジェリカ</a></li>
+                    <li><a href="">相武紗季</a></li>
+                    <li><a href="">安室奈美恵</a></li>
+                  </ul>
+              </div>
+              <div class="department-blk">
+               <p class="department">2課</p>
+                 <ul class="staff-lists cfx">
+                    <li><a href="">山田太郎</a></li>
+                    <li><a href="">片岡鶴太郎</a></li>
+                    <li><a href="">道端ジェシカ</a></li>
+                    <li><a href="">道端アンジェリカ</a></li>
+                    <li><a href="">相武紗季</a></li>
+                    <li><a href="">安室奈美恵</a></li>
+                  </ul>
+                </div>
+            </div>
+          </div>
+        </div>
+         <div class="twelve wide stretched column ui tab tabcontents" data-tab="tab-name2">
+          <div class="ui segment">
+           <h2>フロントエンド</h2>
+             <ul class="staff-lists cfx">
+                <li><a href="">久本雅美</a></li>
+                <li><a href="">ビートたけし</a></li>
+                <li><a href="">小林崇</a></li>
+                <li><a href="">佐々木もよこ</a></li>
+                <li><a href="">たむらけんじ</a></li>
+                <li><a href="">安室奈美恵</a></li>
+              </ul>
+          </div>
+        </div>
+         <div class="twelve wide stretched column ui tab tabcontents" data-tab="tab-name3">
+          <div class="ui segment">
+          <h2>デザイナー</h2>
+             <ul class="staff-lists cfx">
+                <li><a href="">山田太郎</a></li>
+                <li><a href="">片岡鶴太郎</a></li>
+                <li><a href="">道端ジェシカ</a></li>
+                <li><a href="">道端アンジェリカ</a></li>
+                <li><a href="">相武紗季</a></li>
+                <li><a href="">安室奈美恵</a></li>
+              </ul>
+          </div>
+        </div><!-- /デザイナー -->
+        <div class="twelve wide stretched column ui tab tabcontents" data-tab="tab-name4">
+          <div class="ui segment">
+          <h2>プロデューサー</h2>
+             <ul class="staff-lists cfx">
+                <li><a href="">山田太郎</a></li>
+                <li><a href="">片岡鶴太郎</a></li>
+                <li><a href="">道端ジェシカ</a></li>
+                <li><a href="">道端アンジェリカ</a></li>
+                <li><a href="">相武紗季</a></li>
+                <li><a href="">安室奈美恵</a></li>
+              </ul>
+          </div>
+        </div><!-- /プロデューサー-->
+        <div class="twelve wide stretched column ui tab tabcontents" data-tab="tab-name5">
+          <div class="ui segment">
+          <h2>WMC</h2>
+             <ul class="staff-lists cfx">
+                <li><a href="">山田太郎</a></li>
+                <li><a href="">片岡鶴太郎</a></li>
+                <li><a href="">道端ジェシカ</a></li>
+                <li><a href="">道端アンジェリカ</a></li>
+                <li><a href="">相武紗季</a></li>
+                <li><a href="">安室奈美恵</a></li>
+              </ul>
+          </div>
+        </div><!-- /WMC -->
+      </div>
+      <!-- /タブの中味 END -->
+      
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
