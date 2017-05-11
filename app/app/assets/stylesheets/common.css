@@ -1,0 +1,101 @@
+body {
+	color: #222;
+}
+
+nav {
+	background-color: #00b5ad;
+	position: relative;
+}
+
+nav ul {
+	float: left;
+	margin: 0;
+	padding: 0;
+	color: #fff;
+	list-style-type: none;
+}
+
+nav ul a {
+	display: block;
+	color: #fff;
+	font-weight: bold;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+nav ul li {
+	margin-right: 10px;
+	float: left;
+	padding-right: 10px;
+	border-right: 1px solid #fff;
+}
+
+nav ul .inner-child-nav {
+	position: absolute;
+	top: 60px;
+	left: 0;
+	width: 100%;
+	background-color: #9EBCAB;
+	display: none;
+}
+
+nav ul .inner-child-nav a {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+nav ul .child-nav {
+	position: relative;
+	margin-left: 10%;
+}
+
+nav .logout {
+	margin-top: 20px;
+	float: right;
+}
+
+nav .logout a {
+	color: #fff;
+	font-weight: bold;
+}
+
+nav .inner-nav {
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+nav a:hover {
+	color: #fff;
+	opacity: .7;
+}
+
+.cfx:after,
+.cfx:before {
+	content: '';
+	display: table;
+}
+
+.cfx:after {
+	clear: both;
+}
+
+.cfx {
+	zoom: 1;
+}
+
+a {
+	color: #222;
+}
+
+.pushable {
+	height: auto;
+}
+
+.ui.attached.menu {
+	margin-top: 0;
+	background-color: #00b5ad;
+}
+
+.ui.top.attached.menu > .item:first-child {
+	color: #fff;
+}
