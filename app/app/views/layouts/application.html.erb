@@ -3,12 +3,22 @@
   <head>
     <title>App</title>
     <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/components/accordion.css"></script>
+    <%= stylesheet_link_tag "common.css", media: "all" %>
+    <%= stylesheet_link_tag yield(:css), media: "all" %>
+    <%= stylesheet_link_tag controller.controller_name, media: "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= javascript_include_tag "common/common.js", media: "all" %>
+    <%= javascript_include_tag "lib/semantic.min.js", media: "all" %>
+    <%= javascript_include_tag controller.controller_name %>
+    
   </head>
 
   <body>
+    <% unless controller.controller_name === "static_pages" %>
+      <%= render 'layouts/header' %>
+    <% end %>
     <%= yield %>
   </body>
 </html>
