@@ -8,40 +8,35 @@
         新規登録
       </div>
     </h2>
-    <form class="ui large form">
+      <%= form_for @staff, html: {class: "ui large form"} do |f| %>
       <div class="ui stacked">
         <div class="required field">
-          <label for="name" class="">ユーザーネーム</label>
+          <%= f.label :name, "ユーザーネーム" %>
           <div class="ui left icon input">
             
             <i class="user icon"></i>
-            <input type="text" name="name" placeholder="ユーザーネーム">
+            <%= f.text_field :name %>
           </div>
         </div>
         
         <div class="field">
-           <label for="name" class="">メールアドレス</label>
+           <%= f.label :emial, "メールアドレス"%>
           <div class="ui left icon input">
-            <input type="password" name="password" placeholder="メールアドレス">
+            <%= f.text_field :email %>
           </div>
         </div>
         
         <div class="required field">
-           <label for="name" class="">パスワード</label>
+           <%= f.label :password, "パスワード" %>
           <div class="ui left icon input">
             <i class="lock icon"></i>
-            <input type="password" name="password" placeholder="パスワード">
+            <%= f.password_field :password %>
           </div>
         </div>
         <div class="required field">
-           <label for="name" class="">職種</label>
+           <%= f.label :jobcategory, "職種"  %>
           <div class="ui left icon input">
-            <select class="ui fluid search dropdown" name="occupation[expire-month]">
-            <option value="1">フロントエンドエンジニア</option>
-            <option value="2">デザイナー</option>
-            <option value="3">ディレクター</option>
-            <option value="4">プロデユーサー</option>
-            </select>
+            <%= f.select :jobcategory ,{engineer: "Engineer", designer: "Designer", director: "Director", producer: "Producer", wmc: "WMC"},{}, {class: "ui fluid search dropdown"} %>
           </div>
         </div>
         <div class="field">
@@ -91,7 +86,7 @@
         
       </div>
 
-    </form>
+    <% end %>
 
   </div>
 </div>

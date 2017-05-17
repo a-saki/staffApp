@@ -10,21 +10,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170512080508) do
+ActiveRecord::Schema.define(version: 20170517101129) do
+
+  create_table "divisions", force: :cascade do |t|
+    t.text     "division_name"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.index ["division_name"], name: "index_divisions_on_division_name"
+  end
+
+  create_table "jobcategories", force: :cascade do |t|
+    t.text     "jobcategory_name"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.index ["jobcategory_name"], name: "index_jobcategories_on_jobcategory_name"
+  end
 
   create_table "staffs", force: :cascade do |t|
-    t.string   "name",            null: false
+    t.string   "name",                        null: false
     t.string   "email"
     t.string   "password_digest"
     t.string   "careea"
-    t.string   "jobcategory",     null: false
-    t.string   "division",        null: false
     t.string   "twitter"
     t.string   "facebook"
     t.string   "insta"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.integer  "jobcategory",     default: 1
+    t.integer  "division",        default: 1
+    t.index ["division"], name: "index_staffs_on_division"
     t.index ["email"], name: "index_staffs_on_email", unique: true
+    t.index ["jobcategory"], name: "index_staffs_on_jobcategory"
   end
 
 end
