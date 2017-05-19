@@ -92,6 +92,9 @@ header {
 .introduce .sns-lists li {
 	float: left;
 }
+.introduce .sns-lists li.not-has .icon:before {
+	color: #CCCCCC;
+}
 
 .introduce .sns-lists a {
 	color: #222;

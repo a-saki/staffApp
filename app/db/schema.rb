@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170517101129) do
+ActiveRecord::Schema.define(version: 20170519093248) do
 
   create_table "divisions", force: :cascade do |t|
     t.text     "division_name"
@@ -30,17 +30,16 @@ ActiveRecord::Schema.define(version: 20170517101129) do
     t.string   "name",                        null: false
     t.string   "email"
     t.string   "password_digest"
-    t.string   "careea"
     t.string   "twitter"
     t.string   "facebook"
-    t.string   "insta"
+    t.string   "slack"
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
-    t.integer  "jobcategory",     default: 1
-    t.integer  "division",        default: 1
-    t.index ["division"], name: "index_staffs_on_division"
+    t.integer  "jobcategory_id",  default: 1
+    t.integer  "division_id",     default: 1
+    t.index ["division_id"], name: "index_staffs_on_division_id"
     t.index ["email"], name: "index_staffs_on_email", unique: true
-    t.index ["jobcategory"], name: "index_staffs_on_jobcategory"
+    t.index ["jobcategory_id"], name: "index_staffs_on_jobcategory_id"
   end
 
 end

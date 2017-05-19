@@ -33,51 +33,55 @@
             <%= f.password_field :password %>
           </div>
         </div>
+        
         <div class="required field">
-           <%= f.label :jobcategory, "職種"  %>
+           <%= f.label :password_confirmation, "パスワードの確認" %>
           <div class="ui left icon input">
-            <%= f.select :jobcategory ,{engineer: "Engineer", designer: "Designer", director: "Director", producer: "Producer", wmc: "WMC"},{}, {class: "ui fluid search dropdown"} %>
-          </div>
-        </div>
-        <div class="field">
-           <label for="name" class="">職歴</label>
-          <div class="ui left icon input">
-            <input type="password" name="password" placeholder="職歴">
+            <i class="lock icon"></i>
+            <%= f.password_field :password_confirmation %>
           </div>
         </div>
         
-        <div class="field">
-           <label for="name" class="">課</label>
+        <div class="required field">
+           <%= f.label :jobcategory_id, "職種"  %>
           <div class="ui left icon input">
-            <input type="password" name="password" placeholder="職歴">
+            <%= f.collection_select :jobcategory_id, Jobcategory.all, :id, :jobcategory_name, {},{class: "ui fluid search dropdown"} %>
+          </div>
+        </div>
+
+        
+        <div class="field">
+           <label for="division_id" class="">課</label>
+          <div class="ui left icon input">
+            <%= f.collection_select :division_id, Division.all, :id, :division_name, {}, {class: "ui fluid search dropdown"} %>
           </div>
         </div>
         
         <div class="field">
            <label for="name" class="">Twitter</label>
           <div class="ui left icon input">
-            <input type="password" name="password" placeholder="URL">
+            <%= f.text_field :twitter %>
           </div>
         </div>
         
         <div class="field">
            <label for="name" class="">Facebook</label>
           <div class="ui left icon input">
-            <input type="password" name="password" placeholder="URL">
+            <%= f.text_field :facebook %>
           </div>
         </div>
         
         <div class="field">
-           <label for="name" class="">Instagram</label>
+           <label for="name" class="">Slack</label>
           <div class="ui left icon input">
-            <input type="password" name="password" placeholder="URL">
+            <%= f.text_field :slack %>
           </div>
         </div>
         
        
         
         <div class="field">
-          <button class="ui fluid large teal submit button" type="submit">新規登録</button>
+          <%= f.submit "新規登録", class: "ui fluid large teal submit button" %>
         </div>
       </div>
 

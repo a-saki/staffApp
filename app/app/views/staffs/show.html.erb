@@ -1,0 +1,81 @@
+<% provide(:css, "detail.css")%>
+ <header>
+   <h1 class="ui header">
+        <%= @staff.name %>さんのページ
+    </h1>
+
+  </header>
+
+  <div class="container">
+  <!-- ▼個人紹介 -->
+    <div class="introduce cfx">
+      <div class="thumb">
+        <p><%= gravatar_for(@staff,150) %></p>
+      </div>
+      <div class="introduce-txt">
+        <p class="name"><%= @staff.name %></p>
+        <table class="information segment ui">
+          <tbody>
+             <tr>
+              <th>職種</th>
+              <td><%= @job.jobcategory_name %></td>
+            </tr>
+            <tr>
+              <th>課</th>
+              <td><%= @division.division_name %></td>
+            </tr>
+            <tr>
+              <th>メール</th>
+              <td><%= @staff.email %></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="sns">
+          <p class="socialize">SOCIALIZE</p>
+          <ul class="sns-lists">
+            <%= snsIcon(@staff.twitter, "twitter") %>
+            <%= snsIcon(@staff.slack, "slack") %>
+            <%= snsIcon(@staff.facebook, "facebook") %>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- /個人紹介 END -->
+
+    <!-- ▼スキルデータ部分 -->
+    <div class="skilldata">
+      <h2>スキル表</h2>
+      <div class="skilltable">
+        <div class="svg-skill">
+          <p class="title">スキルチャート<span>（<%= @job.jobcategory_name %>）</span></p>
+          <p>SVGグラフが入る</p>
+        </div>
+        <div class="other-skill">
+          <section>
+            <h3><span>その他技術スキル</span></h3>
+            <ul>
+              <li>canvasちょっとだけ</li>
+              <li>node.js知ってます</li>
+              <li>apache結構いける</li>
+            </ul>
+          </section>
+          <section>
+            <h3><span>どうでもスキル</span></h3>
+            <ul>
+              <li>無駄な知識が豊富</li>
+              <li>TVCMなら結構知ってる</li>
+              <li>2ちゃんでの話題豊富</li>
+              <li>気づかれないお世辞を言うのが結構得意</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </div>
+    <!-- /スキルデータ部分 END -->
+
+    <!-- ▼ログインしてる＆自分のページなら表示。それ以外は非表示 -->
+    <div class="edit">
+      <p class="goto-edit"><button class="ui inverted green button"><a href="detail_edit.html">編集する</a></button></p>
+    </div>
+
+  <!-- /container --></div>
