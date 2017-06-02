@@ -4,20 +4,16 @@ one:
   name: MyString
   email: MyString
   password_digest: MyString
-  careea: MyString
-  jobcategory: MyString
-  division: MyString
-  twitter: MyString
+  jobcategory_id: MyString
+  division_id: 1
+  twitter: 1
   facebook: MyString
-  insta: MyString
 
 two:
   name: MyString
   email: MyString
   password_digest: MyString
-  careea: MyString
-  jobcategory: MyString
-  division: MyString
+  jobcategory_id: 2
+  division_id: 2
   twitter: MyString
   facebook: MyString
-  insta: MyString

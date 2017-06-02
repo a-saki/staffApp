@@ -9,6 +9,7 @@
       </div>
     </h2>
       <%= form_for @staff, html: {class: "ui large form"} do |f| %>
+      <%= render "shared/error_message", object: f.object%>
       <div class="ui stacked">
         <div class="required field">
           <%= f.label :name, "ユーザーネーム" %>
