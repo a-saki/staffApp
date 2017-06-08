@@ -4,9 +4,13 @@ class StaffsController < ApplicationController
   end
   
   def show
-    @staff = Staff.find(params[:id])
-    @job = Jobcategory.find(@staff.jobcategory_id)
-    @division = Division.find(@staff.division_id)
+    if !logged_in?
+      redirect_to root_path
+    else
+      @staff = Staff.find(params[:id])
+      @job = Jobcategory.find(@staff.jobcategory_id)
+      @division = Division.find(@staff.division_id)
+    end
   end
   
   
