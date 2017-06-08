@@ -1,0 +1,91 @@
+@charset "UTF-8";
+
+.container {
+	margin-top: 50px;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+.page-login body > .grid {
+	height: 100%;
+}
+
+.page-login .image {
+	margin-top: -100px;
+}
+
+.page-login .column {
+	max-width: 450px;
+}
+
+.page-login .container {
+	margin-top: 50px;
+	width: 40%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.page-singin label {
+	text-align: left;
+}
+
+.page-singin .container {
+	margin-top: 50px;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+.page-lists header {
+	padding-top: 50px;
+	padding-bottom: 30px;
+	text-align: center;
+}
+
+.page-lists h1 {
+	text-align: center;
+}
+
+.page-lists .cantainer {
+	margin-top: 50px;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+.page-lists .ocu-name {
+	color: #666;
+	text-align: center;
+}
+
+.page-lists .inner-column {
+	padding: 10px;
+	border: 1px solid rgba(34, 36, 38, 0.15);
+	border-radius: 10px;
+}
+
+.page-lists .name-lists li {
+	margin: 5px 0;
+}
+
+.page-lists .ocu-lists .tabcontents {
+	-ms-grid-row-align: stretch;
+	align-self: stretch;
+	flex-direction: column;
+}
+
+.page-lists .ocu-lists .wrp-tabcotents {
+	width: 75%;
+	display: inline-flex !important;
+	align-self: stretch;
+	flex-direction: column;
+}
+
+.ui.message {
+	margin-top: 50px;
+}
+
+.danger {
+	color: red;
+	padding: 10px;
+	border: 1px solid red;
+	margin-bottom: 50px;
+}

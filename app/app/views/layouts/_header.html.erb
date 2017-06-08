@@ -1,3 +1,4 @@
+<% if logged_in? %>
 <nav>
   <div class="inner-nav cfx">
     <ul class="cfx">
@@ -5,15 +6,16 @@
       <li class="parent-li"><a href="">各職種</a>
       <div class="inner-child-nav">
         <ul class="child-nav">
-          <li><%= link_to "ディレクター", "#" %></li>
-          <li><%= link_to "フロントエンドエンジニア", "#" %></li>
-          <li><%= link_to "デザイナー", "#" %></li>
-          <li><%= link_to "プロデューサー", "#" %></li>
-          <li><%= link_to "WMC", "#" %></li>
+        <% list_jobcategories.each do |cate| %>
+          <li><%= link_to cate.jobcategory_name, "#" %></li>
+        <% end %>
         </ul>
         </div>
       </li>
     </ul>
-    <p class="logout"><a href="login.html">ログアウト</a></p>
+    
+    <p class="logout"><%= link_to "ログアウト", logout_path , method: :delete %></p>
+    
   </div>
 </nav>
+<% end %>
