@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170519093248) do
+ActiveRecord::Schema.define(version: 20170608080714) do
 
   create_table "divisions", force: :cascade do |t|
     t.text     "division_name"
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20170519093248) do
     t.datetime "updated_at",                  null: false
     t.integer  "jobcategory_id",  default: 1
     t.integer  "division_id",     default: 1
+    t.string   "remember_digest"
     t.index ["division_id"], name: "index_staffs_on_division_id"
     t.index ["email"], name: "index_staffs_on_email", unique: true
     t.index ["jobcategory_id"], name: "index_staffs_on_jobcategory_id"

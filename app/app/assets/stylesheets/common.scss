@@ -90,7 +90,9 @@ a {
 .pushable {
 	height: auto;
 }
-
+.ui.grid {
+	width: 100%;
+}
 .ui.attached.menu {
 	margin-top: 0;
 	background-color: #00b5ad;
@@ -98,6 +100,9 @@ a {
 
 .ui.top.attached.menu > .item:first-child {
 	color: #fff;
+}
+.wrp-container {
+	width: 100%;
 }
 /* エラー */
 .field_with_errors {
@@ -114,5 +119,9 @@ a {
 			color: red;
 		}
 	}
+}
+
+input[type ="hidden"] {
+	display: none;
 }
 

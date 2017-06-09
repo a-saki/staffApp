@@ -14,21 +14,32 @@
         ログイン
       </div>
     </h2>
-      <%= form_for(:session, url: '/', :html => { class: "ui large form"}) do |f| %>
-      <div class="ui stacked segment">
-        <div class="field">
-          <div class="ui left icon input">
-            <i class="mail icon"></i>
-            <%= f.email_field :email, placeholder: "メールアドレス" %>
+      <%= form_for(:session, url: login_path, :html => { class: "ui large form"}) do |f| %>
+      <div class="wrp-form">
+        <div class="ui stacked segment">
+          <div class="field">
+            <div class="ui left icon input">
+              <i class="mail icon"></i>
+              <%= f.email_field :email, placeholder: "メールアドレス" %>
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui left icon input">
+              <i class="lock icon"></i>
+              <%= f.password_field :password, placeholder: "パスワード" %>
+            </div>
+          </div>
+          <%= f.submit "Login", class: "ui fluid large teal submit button" %>
+          
+         
+          
+        </div>
+        <div class="remember">
+          <div class="ui checkbox">
+            <%= f.check_box :remember_me %>
+            <%= f.label "ログイン情報を記憶させる" %>
           </div>
         </div>
-        <div class="field">
-          <div class="ui left icon input">
-            <i class="lock icon"></i>
-            <%= f.password_field :password, placeholder: "パスワード" %>
-          </div>
-        </div>
-        <%= f.submit "Login", class: "ui fluid large teal submit button" %>
       </div>
 
       <div class="ui error message"></div>

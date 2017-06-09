@@ -1,0 +1,23 @@
+h1 {
+  font-size: 30px;
+  color:#00b5ad;
+  text-align: center;
+}
+.container {
+  margin-top: 50px;
+  .to-login {
+    display:table;
+    width: 500px;
+    margin: 50px auto 0;
+    a {
+      width: 100%;
+      
+    }
+    .btn-table {
+      padding: 0 10px;
+      width: 50%;
+      display: table-cell;
+      vertical-align: center;
+    }
+  }
+}

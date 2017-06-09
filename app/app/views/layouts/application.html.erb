@@ -7,7 +7,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/components/accordion.css"></script>
     <%= stylesheet_link_tag "common.css", media: "all" %>
     <%= stylesheet_link_tag yield(:css), media: "all" %>
-    <%= stylesheet_link_tag controller.controller_name, media: "all" %>
     <%= javascript_include_tag "application" %>
     <%= javascript_include_tag "common/common.js", media: "all" %>
     <%= javascript_include_tag "lib/semantic.min.js", media: "all" %>
@@ -15,11 +14,13 @@
     
   </head>
 
-  <body>
+  <body class="<%= "#{controller.controller_name}" %>">
+    <div class="wrp-container">
     <% unless controller.controller_name === "static_pages" %>
       <%= render 'layouts/header' %>
     <% end %>
     <%= yield %>
     <%= debug(params) if Rails.env.development? %>
+    </div>
   </body>
 </html>

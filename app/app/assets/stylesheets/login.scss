@@ -1,9 +1,11 @@
 @charset "UTF-8";
 
 .container {
+	box-sizing: border-box;
+	width: 100%;
 	margin-top: 50px;
-	margin-left: 10%;
-	margin-right: 10%;
+	padding-left: 10%;
+	padding-right: 10%;
 }
 
 .page-login body > .grid {
@@ -88,4 +90,7 @@
 	padding: 10px;
 	border: 1px solid red;
 	margin-bottom: 50px;
+}
+.remember {
+	text-align: left;
 }
