@@ -35,6 +35,12 @@ class StaffsController < ApplicationController
   end
   
   def update
+    @staff = Staff.find(params[:id])
+    if @staff.update(user_params)
+      redirect_to @staff
+    else
+      render "edit"
+    end
     
   end
   

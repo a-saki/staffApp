@@ -1,8 +1,8 @@
 module StaffsHelper
   #SNSアイコン出力
   def snsIcon(model,sns)
-    if model
-      @text = '<li><a href="' + model + '" ><i class="' + sns +' icon"></i></a></li>'
+    if !model.empty?
+      @text = '<li><a href="' + model + '" target="_blank"><i class="' + sns +' icon"></i></a></li>'
       @text.html_safe
     else
       @text = '<li class="not-has"><i class="' + sns +' icon"></i></li>'

@@ -76,7 +76,7 @@
     <!-- ▼ログインしてる＆自分のページなら表示。それ以外は非表示 -->
     <% if session[:staff_id] == @staff.id %>
       <div class="edit">
-        <p class="goto-edit"><button class="ui inverted green button"><%= link_to "編集する", edit_staff_path %></button></p>
+        <p class="goto-edit"><button class="ui inverted green button"><%= link_to "編集する", edit_staff_path(current_user) %></button></p>
       </div>
     <% end %>
 

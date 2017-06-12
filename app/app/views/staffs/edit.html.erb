@@ -8,10 +8,12 @@
 
   <div class="container edit">
     <%= form_for @staff, html: {class: "ui large form"} do |f| %>
+    <%= render "shared/error_message", object: f.object %>
   <!-- ▼個人紹介 -->
     <div class="introduce cfx">
       <div class="thumb">
         <p><%= gravatar_for(@staff,150) %></p>
+        <button class="ui inverted green button"><a href="http://gravatar.com/emails" target="_blank" class="">画像を変更する</a></button>
       </div>
       <div class="introduce-txt">
         <p class="name"><%= f.text_field :name, placeholder: "名前"  %></p>
@@ -56,18 +58,13 @@
           <section>
             <h3><span>その他技術スキル</span></h3>
             <ul>
-              <li>canvasちょっとだけ</li>
-              <li>node.js知ってます</li>
-              <li>apache結構いける</li>
+              <%= f.text_area :other_skill, placeholder: "その他の技術スキルがあればカンマで繋いで入れて下さい"  %>
             </ul>
           </section>
           <section>
             <h3><span>どうでもスキル</span></h3>
             <ul>
-              <li>無駄な知識が豊富</li>
-              <li>TVCMなら結構知ってる</li>
-              <li>2ちゃんでの話題豊富</li>
-              <li>気づかれないお世辞を言うのが結構得意</li>
+              <%= f.text_area :even_skill, placeholder: "その他、どうでもいいスキルをカンマで繋いで入れて下さい"  %>
             </ul>
           </section>
         </div>
@@ -77,7 +74,7 @@
 
     <!-- ▼ログインしてる＆自分のページなら表示。それ以外は非表示 -->
     <div class="edit">
-      <p class="goto-edit"><button class="ui inverted green button"><%= link_to "編集を確定する", edit_staff_path %></button></p>
+      <p class="goto-edit"><%= f.submit "編集を確定する" , class: "ui inverted green button" %></p>
       <p class="goto-cancel"><button class="ui inverted red button"><%= link_to "キャンセル", staff_path %></button></p>
     </div>
 <% end %>
