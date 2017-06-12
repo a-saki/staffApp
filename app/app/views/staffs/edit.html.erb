@@ -6,36 +6,38 @@
 
   </header>
 
-  <div class="container">
+  <div class="container edit">
+    <%= form_for @staff, html: {class: "ui large form"} do |f| %>
   <!-- ▼個人紹介 -->
     <div class="introduce cfx">
       <div class="thumb">
         <p><%= gravatar_for(@staff,150) %></p>
       </div>
       <div class="introduce-txt">
-        <p class="name"><%= @staff.name %></p>
+        <p class="name"><%= f.text_field :name, placeholder: "名前"  %></p>
         <table class="information segment ui">
           <tbody>
              <tr>
               <th>職種</th>
-              <td><%= @job.jobcategory_name %></td>
+              <td><%= f.collection_select :jobcategory_id, Jobcategory.all, :id, :jobcategory_name, {},{class: "ui fluid search dropdown"} %></td>
             </tr>
             <tr>
               <th>課</th>
-              <td><%= @division.division_name %></td>
+              <td><%= f.collection_select :division_id, Division.all, :id, :division_name, {}, {class: "ui fluid search dropdown"} %></td>
             </tr>
             <tr>
               <th>メール</th>
-              <td><%= @staff.email %></td>
+              <td><%= f.text_field :email, placeholder: "メールアドレス" %></td>
             </tr>
           </tbody>
         </table>
         <div class="sns">
           <p class="socialize">SOCIALIZE</p>
           <ul class="sns-lists">
-            <%= snsIcon(@staff.twitter, "twitter") %>
-            <%= snsIcon(@staff.slack, "slack") %>
-            <%= snsIcon(@staff.facebook, "facebook") %>
+            <li><i class="' + twitter +' icon"></i><span>teitter</span><%= f.text_field :twitter %></li>
+            <li><i class="' + slack +' icon"></i><span>slack</span><%= f.text_field :slack %></li>
+            <li><i class="' + facebook +' icon"></i><span>facebook</span><%= f.text_field :facebook %></li>
+       
           </ul>
         </div>
       </div>
@@ -47,7 +49,7 @@
       <h2>スキル表</h2>
       <div class="skilltable">
         <div class="svg-skill">
-          <p class="title">スキルチャート<span>（<%= @job.jobcategory_name %>）</span></p>
+          <p class="title">スキルチャート<span>（<%# @job.jobcategory_name %>）</span></p>
           <p>SVGグラフが入る</p>
         </div>
         <div class="other-skill">
@@ -74,10 +76,9 @@
     <!-- /スキルデータ部分 END -->
 
     <!-- ▼ログインしてる＆自分のページなら表示。それ以外は非表示 -->
-    <% if session[:staff_id] == @staff.id %>
-      <div class="edit">
-        <p class="goto-edit"><button class="ui inverted green button"><%= link_to "編集する", edit_staff_path %></button></p>
-      </div>
-    <% end %>
-
+    <div class="edit">
+      <p class="goto-edit"><button class="ui inverted green button"><%= link_to "編集を確定する", edit_staff_path %></button></p>
+      <p class="goto-cancel"><button class="ui inverted red button"><%= link_to "キャンセル", staff_path %></button></p>
+    </div>
+<% end %>
   <!-- /container --></div>

@@ -223,7 +223,25 @@ textarea {
 	line-height: 1.2857;
 	resize: vertical;
 }
-
+.sns {
+	margin-top: 20px;
+}
 .information input {
 	margin-right: 5px;
+}
+.container.edit {
+	.sns-lists {
+		li {
+			display:block;
+			float: none;
+			margin-top: 15px;
+			input {
+				margin-top: 5px;
+			}
+		}
+	}
+}
+
+.goto-cancel a {
+	color: "#ff5144";
 }

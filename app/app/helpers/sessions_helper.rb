@@ -15,6 +15,12 @@ module SessionsHelper
     end
   end
   
+  def is_sessioned_id
+    if (staff_id = session[:staff_id])
+      @current_user ||= Staff.find_by(id: staff_id)
+    end
+  end
+  
   def remember(staff)
     staff.remember
     cookies.permanent.signed[:staff_id] = staff.id

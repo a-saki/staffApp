@@ -6,10 +6,15 @@ class StaffsController < ApplicationController
   def show
     if !logged_in?
       redirect_to root_path
-    else
-      @staff = Staff.find(params[:id])
-      @job = Jobcategory.find(@staff.jobcategory_id)
-      @division = Division.find(@staff.division_id)
+    else 
+      #DBにレコードが存在するかどうか
+      if view_context.existDB(Staff, params[:id])
+        @staff = Staff.find(params[:id])
+        @job = Jobcategory.find(@staff.jobcategory_id)
+        @division = Division.find(@staff.division_id)
+      else
+        render "nomember"
+      end
     end
   end
   
@@ -23,6 +28,14 @@ class StaffsController < ApplicationController
     else
       render 'new'
     end
+  end
+  
+  def edit
+     @staff = Staff.find(params[:id])
+  end
+  
+  def update
+    
   end
   
   
