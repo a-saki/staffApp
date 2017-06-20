@@ -1,0 +1,114 @@
+header {
+	padding-top: 50px;
+	padding-bottom: 30px;
+	text-align: center;
+	
+}
+
+
+h1 {
+	text-align: center;
+}
+
+.container {
+	margin-top: 50px;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+.ocu-name {
+	color: #666;
+	text-align: center;
+}
+
+.inner-column {
+	padding: 10px;
+	border: 1px solid rgba(34, 36, 38, 0.15);
+	border-radius: 10px;
+}
+
+.name-lists li {
+	margin: 5px 0;
+}
+
+.ocu-lists .tabcontents {
+	height: 100%;
+}
+
+.ocu-lists .tabcontents .ui {
+	height: 100%;
+}
+
+.ocu-lists .wrp-tabcotents {
+	width: 75%;
+	display: inline-flex;
+	align-self: stretch;
+	flex-direction: column;
+}
+
+.ui.tab {
+	display: none;
+}
+
+.ui.tab.active {
+	display: block;
+}
+
+.staff-lists {
+	position: relative;
+	padding-left: 0;
+	list-style-type: none;
+	margin-left: 35px;
+}
+
+.staff-lists li {
+	width: 33.3%;
+	float: left;
+	margin: 5px 0;
+}
+
+.ui.vertical.tabular.menu .active.item {
+	color: #F53FC7;
+}
+
+.wrp-tabcotents .department {
+	margin-left: 5px;
+	font-size: 16px;
+	font-weight: bold;
+	position: relative;
+	padding-left: 30px;
+	&:after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 0;
+		margin-top: -7px;
+		width: 15px;
+		height: 15px;
+		-webkit-border-radius: 50%;
+		-moz-border-radius: 50%;
+		border-radius: 50%;
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#63f79e+0,63f79e+49,207cca+50,f53fc7+50,f53fc7+100 */
+background: #63f79e; /* Old browsers */
+background: -moz-linear-gradient(-45deg, #63f79e 0%, #63f79e 49%, #207cca 50%, #f53fc7 50%, #f53fc7 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg, #63f79e 0%,#63f79e 49%,#207cca 50%,#f53fc7 50%,#f53fc7 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg, #63f79e 0%,#63f79e 49%,#207cca 50%,#f53fc7 50%,#f53fc7 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#63f79e', endColorstr='#f53fc7',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	}
+}
+.wrp-tabcotents {
+	h2 {
+		color: #F53FC7;
+	}
+}
+.wrp-tabcotents .department-blk {
+	margin-bottom: 10px;
+	border-bottom: 1px solid rgba(34, 36, 38, 0.15);
+}
+
+.wrp-tabcotents .department-blk:last-child {
+	border-bottom: 0;
+}
+.ui.vertical.tabular.menu .active.item {
+	background-color: #FFF9EB;
+}

@@ -1,0 +1,61 @@
+<% provide(:css, "list.css")%>
+<% provide(:js, "list.js")%>
+  <header>
+   <h1 class="ui header">
+        社員一覧
+    </h1>
+  </header>
+  
+   <div class="container">
+    <div class="ocu-lists">
+      <div class="ui grid">
+      <div class="four wide column">
+        <div class="ui vertical fluid tabular menu">
+          <% @jobcategoris.each.with_index(7) do |job, i| %>
+            <% if i==7 %>
+             <a class="item active"data-tab="tab-name<%= i %>">
+              <%= job.jobcategory_name %>
+            </a>
+            <% else %>
+            <a class="item"data-tab="tab-name<%= i %>">
+              <%= job.jobcategory_name %>
+            </a>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+      <!-- ▼タブの中味 -->
+      <div class="wrp-tabcotents">
+        <% @jobcategoris.each.with_index(7) do |jobcategory, i| %>
+        <div class="twelve wide stretched column ui tab tabcontents" data-tab="tab-name<%= i %>">
+          <div class="ui segment">
+            <h2><%= jobcategory.jobcategory_name %></h2>
+            <% @divisions.each.with_index(9) do |division, k| %>
+              <% member = getStaffs(i) %>
+              <% exist = getDivisionsStaff(member, k) %>
+              <% if exist.present? %>
+              <div class="department-blk">
+                <p class="department"><%= division.division_name %></p>
+                <ul class="staff-lists cfx">
+                  <% getDivisionsStaff(member, k).each do |staff| %>
+                  <li><%= link_to staff.name, staff %></li>
+                  <% end %>
+                </ul>
+              </div>
+              <!--/department-blk-->
+              <% end %>
+                
+            <% end %><!--/ @divisions.each end-->
+          
+          </div>
+        </div><!--/tabcontents-->
+        <% end %><!--/ @jobcategoris.each end-->
+        
+       
+      </div>
+      <!-- /タブの中味 END -->
+      
+    </div>
+  </div>
+
+</div>

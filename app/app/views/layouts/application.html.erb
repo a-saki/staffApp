@@ -4,13 +4,14 @@
     <title>App</title>
     <%= csrf_meta_tags %>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/components/accordion.css"></script>
     <%= stylesheet_link_tag "common.css", media: "all" %>
     <%= stylesheet_link_tag yield(:css), media: "all" %>
     <%= javascript_include_tag "application" %>
     <%= javascript_include_tag "common/common.js", media: "all" %>
     <%= javascript_include_tag "lib/semantic.min.js", media: "all" %>
-    <%= javascript_include_tag controller.controller_name %>
+    <%= javascript_include_tag yield(:js) %>
     
   </head>
 

@@ -1,4 +1,10 @@
 class StaffsController < ApplicationController
+  def index
+    @staffs = Staff.all
+    @jobcategoris = Jobcategory.all
+    @divisions = Division.all
+  end
+  
   def new
     @staff = Staff.new
   end
@@ -41,8 +47,8 @@ class StaffsController < ApplicationController
     else
       render "edit"
     end
-    
   end
+  
   
   
   # 以下privateクラス

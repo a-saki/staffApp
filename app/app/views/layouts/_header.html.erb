@@ -2,16 +2,7 @@
 <nav>
   <div class="inner-nav cfx">
     <ul class="cfx">
-      <li class="parent-li"><a href="">職種一覧ページ</a></li>
-      <li class="parent-li"><a href="">各職種</a>
-      <div class="inner-child-nav">
-        <ul class="child-nav">
-        <% list_jobcategories.each do |cate| %>
-          <li><%= link_to cate.jobcategory_name, "#" %></li>
-        <% end %>
-        </ul>
-        </div>
-      </li>
+      <li class="parent-li"><a href="/staffs/">職種一覧ページ</a></li>
     </ul>
     
     <p class="logout"><%= link_to "ログアウト", logout_path , method: :delete %></p>

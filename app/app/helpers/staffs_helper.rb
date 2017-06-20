@@ -22,5 +22,19 @@ module StaffsHelper
     model.exists?(id: id)
   end
   
+  # 職種別一覧表示
+  def getStaffs(jobid)
+    @jobMember = Staff.where(jobcategory_id: jobid)
+  end
+  
+  # 課に居る人取得
+  def getDivisionsStaff(member , divid)
+    @dvisionMember = member.where(division_id: divid)
+  end
+  
+  def exitDivisionStaff?
+    getDivisionsStaff.present?
+  end
+  
 
 end

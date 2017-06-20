@@ -1,9 +1,15 @@
 body {
-	color: #222;
+	color: #11256C;
+	font-family: "メイリオ", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN","ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	background-color: #FFF9EB;
+	background: #FFF9EB url(/assets/ptn_bg.png) repeat 0 0;
+	-webkit-background-size: 40px 40px;
+	background-size: 40px 40px;
+	
 }
 
 nav {
-	background-color: #00b5ad;
+	background-color: #1C53F6;
 	position: relative;
 }
 
@@ -11,13 +17,13 @@ nav ul {
 	float: left;
 	margin: 0;
 	padding: 0;
-	color: #fff;
+	color: #FFF9EB;
 	list-style-type: none;
 }
 
 nav ul a {
 	display: block;
-	color: #fff;
+	color: #FFF9EB;
 	font-weight: bold;
 	padding-top: 20px;
 	padding-bottom: 20px;
@@ -27,7 +33,7 @@ nav ul li {
 	margin-right: 10px;
 	float: left;
 	padding-right: 10px;
-	border-right: 1px solid #fff;
+	border-right: 1px solid #FFF9EB;
 }
 
 nav ul .inner-child-nav {
@@ -55,7 +61,7 @@ nav .logout {
 }
 
 nav .logout a {
-	color: #fff;
+	color: #FFF9EB;
 	font-weight: bold;
 }
 
@@ -65,7 +71,7 @@ nav .inner-nav {
 }
 
 nav a:hover {
-	color: #fff;
+	color: #FFF9EB;
 	opacity: .7;
 }
 
@@ -99,7 +105,7 @@ a {
 }
 
 .ui.top.attached.menu > .item:first-child {
-	color: #fff;
+	color: #FFF9EB;
 }
 .wrp-container {
 	width: 100%;
