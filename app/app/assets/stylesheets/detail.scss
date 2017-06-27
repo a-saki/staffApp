@@ -118,13 +118,6 @@ header {
 	width: 100%;
 }
 
-.skilltable .svg-skill {
-	display: table-cell;
-	vertical-align: top;
-	width: 500px;
-	height: 500px;
-	background-color: #f8f8f8;
-}
 
 .skilltable .svg-skill .title {
 	font-weight: bold;
@@ -164,6 +157,7 @@ header {
 }
 
 .edit a {
+	display:block;
 	color: #2ecc40;
 }
 
@@ -265,7 +259,6 @@ textarea {
 	vertical-align: top;
 	width: 700px;
 	height: 500px;
-	background-color: #f8f8f8;
 }
 
 .skilltable .svg-skill .title {
@@ -387,6 +380,13 @@ textarea {
 	font-size: 12px;
 	position: absolute;
 	text-align: center;
+	>span {
+		display: inline-block;
+		padding: 0 5px;
+		background-color: #F53FC7;
+		color: #fff;
+		font-weight: bold;
+	}
 }
 .wrp-skill-table {
 	position: relative;
@@ -398,6 +398,9 @@ textarea {
 	fill: none;
 	stroke-width:1;
 	stroke:#F53FC7;
+	stroke-linecap: round;
+	stroke-dasharray: 1, 5;
+  stroke-dashoffset: 3;
 }
 #vue-skill {
 	position: relative;
@@ -409,7 +412,7 @@ textarea {
 	height: 500px;
 }
 .skill-item .svgtext:nth-child(1) {
-	top: 5px;
+	top: -5px;
 	left: 0;
 	right: 0;
 	margin-left: auto;
@@ -446,8 +449,8 @@ input[type="range"] {
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   background-color: #1C56FB;
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
   border: 2px solid white;
   cursor: pointer;
@@ -456,9 +459,6 @@ input[type="range"]::-webkit-slider-thumb {
   input[type="range"]::-webkit-slider-thumb:hover {
     background-color: white;
     border: 2px solid #e74c3c;
-  }
-  input[type="range"]::-webkit-slider-thumb:active {
-    transform: scale(1.6);
   }
 
 #edit-skill {
@@ -492,4 +492,9 @@ input[type="range"]::-webkit-slider-thumb {
 }
 #edit-skill input:nth-child(5){
 	transform: rotate(-162deg);
+}
+.wrp-svg-skill {
+	width: 700px;
+	display: table-cell;
+	background-color: #fff;
 }

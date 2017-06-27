@@ -11,12 +11,42 @@ var stats = [
     { label: "SEOの知識", value: 100 },
     { label: "レポート作成力", value: 100 },
 ];
+var job_engineer = [ '正確性','情報収集能力','マークアップの速さ', 'バックエンド知識', 'JS'];
+var job_wmc = [ '情報設計力','・調査、分析能力','アクセス解析ツール<br>の理解・設定', 'SEOの知識', 'レポート作成力'];
+var job_wd = [ 'タスク管理','リーダーシップ','企画力', 'マーケティング能力', 'スケジューリング'];
+var job_de = [ '情報設計力','最新トレンド情報力','アニメーション', '洞察力', '客観性'];
+var job_producer = [ 'リーダーシップ','部下把握能力','問題解決力', '進行管理', '営業力'];
+var job_management = [ '正確性','社内管理能力','社員の健康維持', '会社の顔', '経費管理能力'];
+
 Vue.component('show-skill', {
     props: ['stats'],
     template: '#svg-skill',
     beforeCreate: function(){
+        //▼各職種によって、項目を変更。
         for(var i=0; i<5; i++) {
-            stats[i].value = $('#hidden-svg-data').data('cat' + i)
+            stats[i].value = $('#hidden-svg-data').data('cat' + i);
+        }
+        var jobcat = $('#hidden-svg-data').data('jobcategory');
+        if(jobcat === 'エンジニア') {
+            for(var i=0; i<5; i++) {
+                stats[i].label = job_engineer[i];
+            }
+        }else if(jobcat === 'ディレクター'){
+            for(var i=0; i<5; i++) {
+                stats[i].label = job_wd[i];
+            }
+        }else if(jobcat === 'デザイナー'){
+            for(var i=0; i<5; i++) {
+                stats[i].label = job_de[i];
+            }
+        }else if(jobcat === 'プロデューサー'){
+            for(var i=0; i<5; i++) {
+                stats[i].label = job_producer[i];
+            }
+        }else if(jobcat === '管理部'){
+            for(var i=0; i<5; i++) {
+                stats[i].label = job_management[i];
+            }
         }
     },
     computed: {
@@ -50,7 +80,7 @@ Vue.component('show-skill', {
             template: "#svg-skill-range",
             computed: {
                 point: function () {
-                    return getPoints(100 + 10, this.index);
+                    return getPoints(100 + 5, this.index);
                 }
             },
             mounted: function () {
@@ -85,28 +115,33 @@ function getPoints(value, index) {
         y: sin
     };
 }
-function dirstDrawPolygon() {
+function firstDrawPolygon() {
     var degree = 72; //角度
     var centerX = 250;
     var centerY = 250;
-    var centerR = 200;
-    var points = [];
-    for (var i = 0; i < 5; i++) {
-        var temparr = [];
-        var degree = (i * 72) - 90; //角度（上を頂点として描画するために90度引く）
-        var radian = degree * (Math.PI / 180); //ラジアン変換
-        var cos = Math.cos(radian) * centerR + centerX; //x
-        var sin = Math.sin(radian) * centerR + centerY; //y
-        points[i] = { x: cos, y: sin };
+    var count=0;
+    for(var i=0; i<5; i++){
+        var centerR = 200 - count;
+        var points = [];
+    
+        for (var j = 0; j < 5; j++) {
+            var temparr = [];
+            var degree = (j * 72) - 90; //角度（上を頂点として描画するために90度引く）
+            var radian = degree * (Math.PI / 180); //ラジアン変換
+            var cos = Math.cos(radian) * centerR + centerX; //x
+            var sin = Math.sin(radian) * centerR + centerY; //y
+            points[j] = { x: cos, y: sin };
+        }
+        var html = '';
+        for (var key in points) {
+            html += points[key]['x'] + ',' + points[key]['y'] + ' ';
+        }
+        $('.base').append('<polygon points="' + html + '">');
+        count += 40;
     }
-    var html = '';
-    for (var key in points) {
-        html += points[key]['x'] + ',' + points[key]['y'] + ' ';
-    }
-    $('.base').html('<polygon points="' + html + '">');
 }
 $(function () {
-    dirstDrawPolygon();
+    firstDrawPolygon();
     new Vue({
         el: '#vue-skill',
         data: {
