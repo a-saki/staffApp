@@ -1,4 +1,5 @@
 <% provide(:css, "detail.css")%>
+<% provide(:js, "detail.js")%>
  <header>
    <h1 class="ui header">
         <%= @staff.name %>さんのページ
@@ -43,30 +44,46 @@
     <!-- /個人紹介 END -->
 
     <!-- ▼スキルデータ部分 -->
-    <div class="skilldata">
+    <!-- ▼component template -->
+    <script type="text/x-template" id="svg-skill">
+     <div class="wrp-skill-table">
+      <svg class="skill-chart">
+        <g>
+          <polygon id="skill-polygon" v-bind:points="points"></polygon>
+          </g>
+
+        </svg>
+        <div class="skill-item">
+         <show-skill-name v-for="(stat, index) in stats" v-bind:stat="stat" v-bind:index="index"></show-skill-name>
+         </div>
+    </div>
+    </script>
+
+    <script type="text/x-template" id="svg-skill-name">      
+       <span v-bind:x="point.x-30" v-bind:y="point.y" class="svgtext" v-html="stat.label"></span>
+    </script>
+
+    <!-- /component template-->
+    
+    <div class="skilldata" id="skill-area">
       <h2>スキル表</h2>
       <div class="skilltable">
+        <input type="hidden" id="hidden-svg-data" data-cat0="<%= @staff.mainskill_0 %>" data-cat1="<%= @staff.mainskill_1 %>" data-cat2="<%= @staff.mainskill_2 %>" data-cat3="<%= @staff.mainskill_3 %>" data-cat4="<%= @staff.mainskill_4 %>"></input>
         <div class="svg-skill">
-          <p class="title">スキルチャート<span>（<%= @job.jobcategory_name %>）</span></p>
-          <p>SVGグラフが入る</p>
+          <div class="svg-skill" id="vue-skill">
+            <div class="wrp-base-svg"><svg class="base"></svg></div>
+            <show-skill v-bind:stats="stats"></show-skill>
+          </div>
         </div>
+        
         <div class="other-skill">
           <section>
-            <h3><span>その他技術スキル</span></h3>
-            <ul>
-              <li>canvasちょっとだけ</li>
-              <li>node.js知ってます</li>
-              <li>apache結構いける</li>
-            </ul>
+            <h3><span>その他技術スキル（得意なものなど）</span></h3>
+            <div class="skillcontent"><%= @staff.other_skill %></div>
           </section>
           <section>
             <h3><span>どうでもスキル</span></h3>
-            <ul>
-              <li>無駄な知識が豊富</li>
-              <li>TVCMなら結構知ってる</li>
-              <li>2ちゃんでの話題豊富</li>
-              <li>気づかれないお世辞を言うのが結構得意</li>
-            </ul>
+            <div class="skillcontent"><%= @staff.even_skill %></div>
           </section>
         </div>
       </div>

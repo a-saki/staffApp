@@ -54,7 +54,7 @@ class StaffsController < ApplicationController
   # 以下privateクラス
   private
     def user_params
-      params.require(:staff).permit(:name, :email, :password,:password_confirmation, :jobcategory_id, :division_id, :twitter, :facebook, :slack)
+      params.require(:staff).permit(:name, :email, :password,:password_confirmation, :jobcategory_id, :division_id, :twitter, :facebook, :slack, :other_skill, :even_skill, :mainskill_0, :mainskill_1, :mainskill_2, :mainskill_3, :mainskill_4)
     end
 
   

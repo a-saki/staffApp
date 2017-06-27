@@ -9,7 +9,7 @@
 
 <div class="ui middle aligned center aligned grid">
   <div class="column">
-    <h2 class="ui teal image header">
+    <h2 class="ui pink image header">
       <div class="content">
         ログイン
       </div>
@@ -29,7 +29,7 @@
               <%= f.password_field :password, placeholder: "パスワード" %>
             </div>
           </div>
-          <%= f.submit "Login", class: "ui fluid large teal submit button" %>
+          <%= f.submit "Login", class: "ui fluid large pink submit button" %>
           
          
           
@@ -44,8 +44,8 @@
 
       <div class="ui error message"></div>
     <% end %>
-    <div class="ui message">
-      <%= link_to "新規登録", signup_path %>
+    <div class="ui pink basic button newbtn">
+     <%= link_to "新規登録", signup_path %>
     </div>
   </div>
 </div>

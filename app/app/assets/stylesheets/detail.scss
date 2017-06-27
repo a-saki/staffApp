@@ -155,7 +155,7 @@ header {
 	border-bottom: 1px dashed rgba(34, 36, 38, 0.15);
 }
 
-.skilltable .other-skill ul {
+.skilltable .other-skill .skillcontent {
 	padding-left: 2rem;
 }
 
@@ -244,4 +244,252 @@ textarea {
 
 .goto-cancel a {
 	color: "#ff5144";
+}
+
+/*
+* スキルデータ部分
+*/
+.skilldata {
+	margin-top: 50px;
+	padding-top: 20px;
+	border-top: 1px solid rgba(34, 36, 38, 0.15);
+}
+
+.skilltable {
+	display: table;
+	width: 100%;
+}
+
+.skilltable .svg-skill {
+	display: table-cell;
+	vertical-align: top;
+	width: 700px;
+	height: 500px;
+	background-color: #f8f8f8;
+}
+
+.skilltable .svg-skill .title {
+	font-weight: bold;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.skilltable .other-skill {
+	padding-left: 20px;
+	display: table-cell;
+	vertical-align: top;
+}
+
+.skilltable .other-skill section {
+	margin-bottom: 45px;
+}
+
+.skilltable .other-skill h3 {
+	border-top: 1px dashed rgba(34, 36, 38, 0.15);
+	border-bottom: 1px dashed rgba(34, 36, 38, 0.15);
+	padding: 5px 0;
+}
+
+.skilltable .other-skill h3 span {
+	padding: 10px 0;
+	padding-left: 1rem;
+	display: block;
+	border-top: 1px dashed rgba(34, 36, 38, 0.15);
+	border-bottom: 1px dashed rgba(34, 36, 38, 0.15);
+}
+
+.skilltable .other-skill ul {
+	padding-left: 2rem;
+}
+
+.edit {
+	margin-top: 50px;
+}
+
+.edit a {
+	color: #2ecc40;
+}
+
+.edit .button:hover a {
+	color: #fff;
+}
+
+.edit .goto-edit {
+	float: right;
+}
+
+.edit.edit-fix p {
+	float: left;
+}
+
+.edit.edit-fix p.goto-fix {
+	float: right;
+}
+
+.edit .goto-cancel a {
+	color: #ff695e;
+}
+
+.edit .goto-fix {
+	float: right;
+}
+
+input:not([type]), input[type=date], input[type=datetime-local], input[type=email], input[type=file], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=time], input[type=url] {
+	font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+	margin: 0;
+	outline: 0;
+	-webkit-appearance: none;
+	tap-highlight-color: rgba(255, 255, 255, 0);
+	line-height: 1.21428571em;
+	padding: .2em 1em;
+	background: #fff;
+	border: 1px solid rgba(34, 36, 38, 0.15);
+	color: rgba(0, 0, 0, 0.87);
+	border-radius: .28571429rem;
+	box-shadow: 0 0 0 0 transparent inset;
+	transition: color .1s ease,border-color .1s ease;
+}
+
+textarea {
+	margin: 0;
+	width: 100%;
+	-webkit-appearance: none;
+	tap-highlight-color: rgba(255, 255, 255, 0);
+	padding: .78571429em 1em;
+	background: #fff;
+	border: 1px solid rgba(34, 36, 38, 0.15);
+	outline: 0;
+	color: rgba(0, 0, 0, 0.87);
+	border-radius: .28571429rem;
+	box-shadow: 0 0 0 0 transparent inset;
+	transition: color .1s ease,border-color .1s ease;
+	line-height: 1.2857;
+	resize: vertical;
+}
+
+.information input {
+	margin-right: 5px;
+}
+
+
+#vue-skill svg {
+	display: block;
+	margin: 40px auto 0;
+	width: 500px;
+	height: 500px;
+}
+#vue-skill .wrp-base-svg {
+	position: absolute;
+	top: 0;
+	left: 100px;
+}
+#vue-skill .svgtext {
+	font-size: 12px;
+	position: absolute;
+	text-align: center;
+}
+.wrp-skill-table {
+	position: relative;
+}
+.wrp-skill-table .skill-chart {
+	fill : #F53FC7;
+}
+.base {
+	fill: none;
+	stroke-width:1;
+	stroke:#F53FC7;
+}
+#vue-skill {
+	position: relative;
+}
+.skill-item {
+	position: absolute;
+	top: 0;
+	width: 700px;
+	height: 500px;
+}
+.skill-item .svgtext:nth-child(1) {
+	top: 5px;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+}
+.skill-item .svgtext:nth-child(2) {
+	top: 180px;
+	right: 50px;
+}
+.skill-item .svgtext:nth-child(3) {
+	top: 430px;
+	right: 150px;
+}
+.skill-item .svgtext:nth-child(4) {
+	top: 430px;
+	left: 180px;
+}
+.skill-item .svgtext:nth-child(5) {
+	top: 180px;
+	left: 50px;
+}
+
+
+input[type="range"] {
+  display: block;
+  -webkit-appearance: none;
+  background-color: transparent;
+  width: 300px;
+  height: 5px;
+  border-radius: 5px;
+  margin: 0 auto;
+  outline: 0;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: #1C56FB;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid white;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+}​
+  input[type="range"]::-webkit-slider-thumb:hover {
+    background-color: white;
+    border: 2px solid #e74c3c;
+  }
+  input[type="range"]::-webkit-slider-thumb:active {
+    transform: scale(1.6);
+  }
+
+#edit-skill {
+	position: absolute;
+	width: 500px;
+	height: 500px;
+	top: 0px;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	z-index: 500;
+}
+#edit-skill input {
+	position: absolute;
+	transform-origin: right center;
+	width: 200px;
+}
+#edit-skill input:nth-child(1){
+	transform: rotate(-90deg);
+}
+
+#edit-skill input:nth-child(2){
+	transform: rotate(-18deg);
+}
+#edit-skill input:nth-child(3){
+	transform: rotate(54deg);
+}
+#edit-skill input:nth-child(4){
+	transform: rotate(126deg);
+}
+#edit-skill input:nth-child(5){
+	transform: rotate(-162deg);
 }
