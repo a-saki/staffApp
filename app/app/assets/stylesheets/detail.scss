@@ -109,7 +109,7 @@ header {
 */
 .skilldata {
 	margin-top: 50px;
-	padding-top: 20px;
+	padding-top: 50px;
 	border-top: 1px solid rgba(34, 36, 38, 0.15);
 }
 
@@ -161,29 +161,7 @@ header {
 	color: #2ecc40;
 }
 
-.edit .button:hover a {
-	color: #fff;
-}
 
-.edit .goto-edit {
-	float: right;
-}
-
-.edit.edit-fix p {
-	float: left;
-}
-
-.edit.edit-fix p.goto-fix {
-	float: right;
-}
-
-.edit .goto-cancel a {
-	color: #ff695e;
-}
-
-.edit .goto-fix {
-	float: right;
-}
 
 input:not([type]), input[type=date], input[type=datetime-local], input[type=email], input[type=file], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=time], input[type=url] {
 	font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
@@ -245,10 +223,9 @@ textarea {
 */
 .skilldata {
 	margin-top: 50px;
-	padding-top: 20px;
+	padding-top: 50px;
 	border-top: 1px solid rgba(34, 36, 38, 0.15);
 }
-
 .skilltable {
 	display: table;
 	width: 100%;
@@ -327,38 +304,7 @@ textarea {
 	float: right;
 }
 
-input:not([type]), input[type=date], input[type=datetime-local], input[type=email], input[type=file], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=time], input[type=url] {
-	font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
-	margin: 0;
-	outline: 0;
-	-webkit-appearance: none;
-	tap-highlight-color: rgba(255, 255, 255, 0);
-	line-height: 1.21428571em;
-	padding: .2em 1em;
-	background: #fff;
-	border: 1px solid rgba(34, 36, 38, 0.15);
-	color: rgba(0, 0, 0, 0.87);
-	border-radius: .28571429rem;
-	box-shadow: 0 0 0 0 transparent inset;
-	transition: color .1s ease,border-color .1s ease;
-}
 
-textarea {
-	margin: 0;
-	width: 100%;
-	-webkit-appearance: none;
-	tap-highlight-color: rgba(255, 255, 255, 0);
-	padding: .78571429em 1em;
-	background: #fff;
-	border: 1px solid rgba(34, 36, 38, 0.15);
-	outline: 0;
-	color: rgba(0, 0, 0, 0.87);
-	border-radius: .28571429rem;
-	box-shadow: 0 0 0 0 transparent inset;
-	transition: color .1s ease,border-color .1s ease;
-	line-height: 1.2857;
-	resize: vertical;
-}
 
 .information input {
 	margin-right: 5px;
