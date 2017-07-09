@@ -1,8 +1,12 @@
 class StaffsController < ApplicationController
   def index
-    @staffs = Staff.all
-    @jobcategoris = Jobcategory.all
-    @divisions = Division.all
+    if !logged_in?
+      redirect_to root_path
+    else 
+      @staffs = Staff.all
+      @jobcategoris = Jobcategory.all
+      @divisions = Division.all
+    end
   end
   
   def new
@@ -38,6 +42,7 @@ class StaffsController < ApplicationController
   
   def edit
      @staff = Staff.find(params[:id])
+      @job = Jobcategory.find(@staff.jobcategory_id)
   end
   
   def update

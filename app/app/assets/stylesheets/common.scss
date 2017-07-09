@@ -2,7 +2,7 @@ body {
 	color: #11256C;
 	font-family: "メイリオ", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN","ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 	background-color: #FFF9EB;
-	background: #FFF9EB url(/assets/ptn_bg.png) repeat 0 0;
+	background: #FFF9EB image-url('ptn_bg.png') repeat 0 0;
 	-webkit-background-size: 40px 40px;
 	background-size: 40px 40px;
 	
